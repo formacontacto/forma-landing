@@ -58,7 +58,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .ticker{background:var(--orange);padding:20px 0;overflow:hidden}
 .ticker-inner{display:flex;animation:ticker 24s linear infinite;white-space:nowrap;width:max-content}
 @keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.ticker-item{font-family:'AkzidenzGrotesk',sans-serif;font-weight:300;font-size:11px;letter-spacing:0.24em;text-transform:uppercase;color:rgba(255,255,255,0.88);padding:0 36px}
+.ticker-item{font-family:'AkzidenzGrotesk',sans-serif!important;font-weight:300!important;font-size:11px!important;letter-spacing:0.24em;text-transform:uppercase;color:rgba(255,255,255,0.88);padding:0 36px;line-height:1;display:inline-flex;align-items:center}
 .ticker-dot{width:3px;height:3px;background:rgba(255,255,255,0.4);border-radius:50%;margin:0 36px;flex-shrink:0;display:inline-block;vertical-align:middle}
 
 section{padding:96px 5%}
@@ -131,7 +131,11 @@ footer{background:var(--black);padding:44px 5%;display:flex;align-items:center;j
 .reveal.visible{opacity:1;transform:translateY(0)}
 
 @media(max-width:900px){
-  .hero{grid-template-columns:1fr}.hero-right{display:none}
+  .hero{grid-template-columns:1fr;overflow-x:hidden}.hero-right{display:none}
+  .hero-left{padding:60px 6% 100px 6%;min-width:0;width:100%;box-sizing:border-box}
+  .hero-headline{font-size:min(8.5vw,52px);line-height:1.1;word-break:normal;overflow-wrap:normal;hyphens:none}
+  .hero-sub{max-width:100%;font-size:15px}
+  .hero-tag{font-size:10px;letter-spacing:0.16em}
   .services-hdr,.sec-why,.sec-contact,.proceso-hdr{grid-template-columns:1fr;gap:40px}
   .services-grid{grid-template-columns:1fr}
   .proceso-steps{grid-template-columns:1fr 1fr}
@@ -144,6 +148,10 @@ footer{background:var(--black);padding:44px 5%;display:flex;align-items:center;j
   .proceso-steps{grid-template-columns:1fr}
   .hero-stats{display:none}
   .nav-logo img{height:22px}
+  .hero-left{padding:48px 5% 80px 5%}
+  .hero-headline{font-size:min(8.5vw,44px);line-height:1.1;word-break:normal;overflow-wrap:normal;hyphens:none}
+  .hero-actions{flex-direction:column;gap:12px}
+  .hero-actions .btn-primary,.hero-actions .btn-secondary{width:100%;text-align:center}
 }
 </style>
 </head>
