@@ -129,6 +129,10 @@ footer{background:var(--black);padding:44px 5%;display:flex;align-items:center;j
 .f-divider{width:1px;height:36px;background:rgba(239,239,239,0.12)}
 .f-tagline{font-family:'AkzidenzGrotesk',sans-serif;font-weight:300;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--skyblue);line-height:1.7}
 .f-copy{font-family:'AkzidenzGrotesk',sans-serif;font-weight:300;font-size:11px;color:rgba(239,239,239,0.2);letter-spacing:0.06em}
+.f-right{display:flex;flex-direction:column;gap:6px;align-items:flex-end}
+.f-contact-row{display:flex;gap:24px}
+.f-link{font-family:'AkzidenzGrotesk',sans-serif;font-weight:300;font-size:12px;color:rgba(239,239,239,0.45);letter-spacing:0.06em;text-decoration:none;transition:color 0.2s;white-space:nowrap}
+.f-link:hover{color:#E9662B}
 
 .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.6s ease,transform 0.6s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
@@ -159,10 +163,11 @@ footer{background:var(--black);padding:44px 5%;display:flex;align-items:center;j
   .footer-inner>div:last-child{align-items:flex-start!important}
   .footer-inner>div:last-child>div:first-child{flex-direction:column;gap:8px}
 
-  .f-inner{flex-direction:column!important;gap:20px!important;align-items:flex-start!important}
-  .f-contact{flex-direction:column!important;align-items:flex-start!important;gap:8px!important;width:100%!important}
-  .f-contact a{white-space:normal!important;word-break:break-all!important;font-size:13px!important}
-  .f-info{flex-direction:column!important;gap:16px!important;align-items:flex-start!important}}
+  footer{flex-direction:column!important;gap:24px!important;align-items:flex-start!important}
+  .f-right{align-items:flex-start!important}
+  .f-contact-row{flex-direction:column!important;gap:8px!important}
+  .f-link{font-size:14px!important;white-space:nowrap!important}
+  .f-copy{white-space:nowrap!important}}
 </style>
 </head>
 <body>
@@ -601,10 +606,10 @@ document.addEventListener('keydown', function(e) {
     <div class="f-divider"></div>
     <span class="f-tagline">Construcción<br>Estratégica</span>
   </div>
-  <div style="display:flex;flex-direction:column;gap:6px;align-items:flex-end">
-    <div style="display:flex;gap:24px">
-      <a href="tel:+34652065152" style="font-family:'AkzidenzGrotesk',sans-serif;font-weight:300;font-size:12px;color:rgba(239,239,239,0.45);letter-spacing:0.06em;text-decoration:none;transition:color 0.2s" onmouseover="this.style.color='#E9662B'" onmouseout="this.style.color='rgba(239,239,239,0.45)'">+34 652 06 51 52</a>
-      <a href="mailto:contacto@formaproyectos.es" style="font-family:'AkzidenzGrotesk',sans-serif;font-weight:300;font-size:12px;color:rgba(239,239,239,0.45);letter-spacing:0.06em;text-decoration:none;transition:color 0.2s" onmouseover="this.style.color='#E9662B'" onmouseout="this.style.color='rgba(239,239,239,0.45)'">contacto@formaproyectos.es</a>
+  <div class="f-right">
+    <div class="f-contact-row">
+      <a href="tel:+34652065152" class="f-link">+34 652 06 51 52</a>
+      <a href="mailto:contacto@formaproyectos.es" class="f-link">contacto@formaproyectos.es</a>
     </div>
     <p class="f-copy">© 2026 FORMA · Valencia, España</p>
   </div>
